@@ -1,0 +1,40 @@
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <span class="navbar-brand">Gestión de Productos</span>
+    <button class="logout-btn" (click)="logout()">Cerrar Sesión</button>
+  </div>
+</nav>
+
+<!-- Lista de Productos -->
+<div class="product-list">
+  <h2>Lista de Productos</h2>
+
+  <!-- Formulario para agregar productos -->
+  <form (submit)="addProduct()" #productForm="ngForm">
+    <label>
+      Nombre:
+      <input type="text" [(ngModel)]="newProduct.name" name="name" required />
+    </label>
+    <label>
+      Descripción:
+      <input type="text" [(ngModel)]="newProduct.description" name="description" required />
+    </label>
+    <label>
+      Precio:
+      <input type="number" [(ngModel)]="newProduct.price" name="price" required />
+    </label>
+    <button type="submit" [disabled]="!productForm.valid">Agregar Producto</button>
+  </form>
+
+  <!-- Lista de productos -->
+  <ul>
+    <li *ngFor="let product of products">
+      <strong>{{ product.name }}</strong> - {{ product.description }} (${{ product.price }})
+      <!-- Validar si product.id no es undefined antes de llamar a deleteProduct -->
+      <button *ngIf="product.id !== undefined" (click)="deleteProduct(product.id!)">
+        Eliminar
+      </button>
+    </li>
+  </ul>
+</div>

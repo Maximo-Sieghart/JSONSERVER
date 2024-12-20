@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "password"
+    }
+  ],
+  "products": [
+    {
+      "id": "2",
+      "name": "Smartphone Samsung Galaxy S21",
+      "description": "Pantalla AMOLED, 128GB almacenamiento, 8GB RAM",
+      "price": 800
+    },
+    {
+      "id": "3",
+      "name": "Mouse Logitech MX Master 3",
+      "description": "Ratón inalámbrico ergonómico con múltiples botones",
+      "price": 100
+    },
+    {
+      "id": "4",
+      "name": "Auriculares Sony WH-1000XM4",
+      "description": "Auriculares con cancelación activa de ruido",
+      "price": 300
+    },
+    {
+      "id": "5699",
+      "name": "mmm",
+      "description": "ddd",
+      "price": 333
+    }
+  ]
+}
